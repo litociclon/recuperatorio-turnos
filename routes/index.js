@@ -3,7 +3,14 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Al proyecto de recuperatorio' });
+  res.render('index');
 });
 
+router.get("/publico", function(req, res, next){
+  res.render("publico");
+})
+
+router.get("/nuevo-ticket", function(req, res, next){
+  res.render("nuevo-ticket");
+})
 module.exports = router;

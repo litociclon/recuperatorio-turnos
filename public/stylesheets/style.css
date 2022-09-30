@@ -1,8 +1,62 @@
+html,
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #a0a0a0cb;
+    color: rgb(20, 20, 20);
 }
 
-a {
-  color: #00B7FF;
+table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.ticket-actual {
+    background-color: #e0e0e0;
+}
+
+.ticket-actual-numero {
+    font-family: Copperplate,fantasy;
+    font-size: 100px;
+}
+
+.ticket-actual-datos {
+    font-family: Copperplate,fantasy;
+    font-size: 70px;
+}
+
+.ticket-actual-escritorio {
+    font-family: Copperplate,fantasy;
+    font-size: 100px;
+}
+
+.ticket-secundario {
+    font-family: Copperplate,fantasy;
+    font-size: 30px;
+}
+
+.ticket-secundario-escritorio {
+    font-family: Copperplate,fantasy;
+    font-size: 30px;
+}
+
+/* Nuevo-ticket */
+
+#lblNuevoTicket {
+    font-family: Copperplate,fantasy;
+    font-size: 70px;
+}
+
+#lblNuevoDato {
+    margin: 0 auto;
+    float: none;
+}
+
+.contenido {
+    max-width: 1200px;
+    margin: 5rem auto 0 auto;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Carrois Gothic SC', sans-serif;
 }
