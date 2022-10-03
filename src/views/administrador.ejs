@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>turnero</title>
+    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+  </head>
+  <!-- As a link -->
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+  </div>
+</nav>
+
+<!-- As a heading -->
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Bienvenidos</span>
+  </div>
+</nav>
+<body class="container">
+  <nav class="navbar fixed-top navbar-light bg-light">
+      <img src="./img/distrito3chico.png" class="rounded float-left" alt="logo">
+  </nav>
+  <br>
+  <br>
+  <br>
+  <h1 class="mt-5">PROGRAMA DE TURNOS</h1>
+
+  <div class="row">
+      <div class="col-6">
+          <hr>
+          <a class="btn btn-primary" href="/">IR A PANTALLA PUBLICA</a>
+          <a class="btn btn-success" href="/login/administrador/turnos">CREAR TURNOS</a>
+
+      </div>
+
+      <div class="col-6">
+          <form action="escritorio.html">
+              <p>Ingrese el número de BOX:  (del 1 al 4)</p>
+
+              <input name="escritorio" type="text" class="form-control" placeholder="Escritorio" autofocus required>
+
+              <br>
+              <button type="submit" class="btn btn-primary">
+                  Ingresar
+              </button>
+          </form>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-6">
+          <hr>
+          <!--<a class="btn btn-secondary" href="/informes.html">INFORMES</a>-->
+      </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+</body> 
+<footer class="page-footer font-small pt-4" style="background-color: #1d1f1e;">
+  <div class="footer-copyright text-center py-3" style="color: whitesmoke;">
+      © 2022  Prov. de Buenos Aires
+  </div>
+</footer>  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./socket.io/socket.io.js"></script>
+<script src="./js/principal.js"></script>
+
+</html>
