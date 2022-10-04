@@ -39,6 +39,33 @@
         </tr>
     </table>
 
+    <h4>Pendientes sin atender:</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <% for( let i = 0; i < turnos.length; i++ ) { %>
+            <tr>
+                <td>Ticket Nro.   <%= turnos[i].id %></td>
+                <td>Codigo:   <%= turnos[i].code %></td>
+            </tr>
+            <% } %>
+        </thead>
+        <tbody id="data0">
+        </tbody>
+
+    </table>
+    <div class="col-6">
+        <form action="escritorio.html">
+            <p>Ingrese el número de BOX:  (del 1 al 4)</p>
+
+            <input name="escritorio" type="text" class="form-control" placeholder="Escritorio" autofocus required>
+
+            <br>
+            <button type="submit" class="btn btn-primary">
+                Ingresar
+            </button>
+        </form>
+    </div>
+
 
 </body>
 

@@ -1,7 +1,6 @@
 const db = require('../database/models')
-const sequelize = db.sequelize;
 
-module.exports = {
+const controller = {
     index: (req, res) => {
         db.orderly_turns.findAll()
         .then(function(turnos){
@@ -9,13 +8,15 @@ module.exports = {
             //res.json(turnos);
         });
     },
-
-
-    list: (req, res) => {
-        db.orderly_turns.findAll()
-        .then(function(turnos){
-            return res.render("turnos", {turnos})
-            //res.json(turnos);
+   /* index: (req, res) => {
+        res.render("index");
+	}*/
+    /*list: (req, res) => {
+        db.Users.findAll()
+        .then(function(users){
+            res.json(users);
         });
-    }
+    }*/
 }
+
+module.exports = controller;

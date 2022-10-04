@@ -20,53 +20,88 @@
         <tr>
             <td valign="middle" class="ticket-actual">
 
-                <span id="lblTicket1" class="ticket-actual-numero"></span>
-                <br>
-                <span id="lblDatos1" class="ticket-actual-datos"></span>
-                <br>
-                <span id="lblEscritorio1" class="ticket-actual-escritorio"></span>
+                <div class="mx-auto" style="width: 4px;">
+                 
+                    <h3>CODIGO    <%= turnos[0].code %></h3>
+                    <br>
+                    <br>
+                    <h3>CAJA     <%= turnos[0].box %></h3>
+                   
+                </div>
             </td>
             <td>
                 <table id="tablasecundaria">
                     <tr>
                         <td>
-                            <span id="lblTicket2" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblDatos2" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblDatos2" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblEscritorio2" class="ticket-secundario-escritorio"></span>
-                            <hr>
+                            <div class="mx-auto" style="width: 2px;">
+                                
+                                <h3><%= turnos[1].code %></h3>
+                                <br>
+                                <br>
+                                <h3>CAJA  <%= turnos[1].box %></h3>
+                              
+                                
+                                
+                              </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span id="lblTicket3" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblDatos3" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblDatos3" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblEscritorio3" class="ticket-secundario-escritorio"></span>
-                            <hr>
+                            <div class="mx-auto" style="width: 2px;">
+                                
+                                <h3><%= turnos[2].code %></h3>
+                                <br>
+                                <br>
+                                <h3>CAJA  <%= turnos[2].box %></h3>
+                              
+                                
+                                
+                              </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span id="lblTicket4" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblDatos4" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblDatos4" class="ticket-secundario"></span>
-                            <br>
-                            <span id="lblEscritorio4" class="ticket-secundario-escritorio"></span>
+                            <div class="mx-auto" style="width: 2px;">
+                                
+                                <h3><%= turnos[3].code %></h3>
+                                <br>
+                                <br>
+                                <h3>CAJA  <%= turnos[3].box %></h3>
+                              
+                                
+                                
+                              </div>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
+    <script>
+        window.setTimeout(function () {
+            window.location.reload();
+            }, 15000);
+
+        /*const dataTable = document.getElementById("dataTable");
+        const btnExportToCsv = document.getElementById("btnExportToCsv");
+
+        btnExportToCsv.addEventListener("click", () => {
+            const exporter = new TableCSVExporter(dataTable);
+            const csvOutput = exporter.convertirCSV();
+            const csvBlob = new Blob([csvOutput], { type: "text/csv" });
+            const blobUrl = URL.createObjectURL(csvBlob);
+            const anchorElement = document.createElement("a");
+
+            anchorElement.href = blobUrl;
+            anchorElement.download = `${new Date().toLocaleDateString()}.csv`;
+            anchorElement.click();
+
+            setTimeout(() => {
+                URL.revokeObjectURL(blobUrl);
+            }, 500);
+        });*/
+    </script>
+
 
 
 

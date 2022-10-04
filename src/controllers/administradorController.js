@@ -1,25 +1,32 @@
-
+const db = require('../database/models')
 
 
 const controller = {
 
     index: (req, res) => {
-        res.render("index");
-	},
-    administrador: (req, res) => {
-        res.render("administrador");
-	},
-
-   turnos:  (req, res) => {
-        res.render("turnos");
-	},
+        db.orderly_turns.findAll()
+        .then(function(turnos){
+            return res.render("index", {turnos})
+            //res.json(turnos);
+        });
+    },
 
     login: (req, res) => {
         res.render("login");
 	},
-    usuario: (req, res) => {
+
+    administrador: (req, res) => {
+        res.render("admin");
+	},
+
+  // turnos:  (req, res) => {
+    //    res.render("turnos");
+	//}
+
+   
+   /* usuario: (req, res) => {
         res.render("administrador");
-    }
+    }*/
 }
 
 

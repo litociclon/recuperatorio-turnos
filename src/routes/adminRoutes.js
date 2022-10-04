@@ -1,9 +1,10 @@
 var express = require('express');
-//const { index, administrador, turnos } = require('../controllers/administradorController');
-//const { index, administrador, turnos} = require('../controllers/administradorController');
 var router = express.Router();
 const adminController = require("../controllers/administradorController");
 
+//router.get('/', adminController. index);
+
+//router.get('/login', adminController. login);
 
 
 
