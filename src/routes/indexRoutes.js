@@ -20,6 +20,9 @@ router.post("/admin", adminController. administrador );
 //router.get("/admin/turnos", adminController. turnos);
 
 router.get("/admin/turnos", turnosController. list )
+router.post("/admin/create", turnosController. create)
+
+router.get("/admin/turnos/turnoId/:id", turnosController. detail )
 
 
 

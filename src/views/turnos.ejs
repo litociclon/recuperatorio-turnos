@@ -10,49 +10,39 @@
      <link rel="stylesheet" href="stylesheets/keyboard.css">
 
     <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>
-                <span id="lblNuevoTicket">
-                    Cargando...
-                </span>
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <H3 style="font-size: 300%; font-family:Copperplate,fantasy;">Ingrese Matricula o DNI</H4>
-                    <input class="use-keyboard-input" style="box-sizing: 30px; padding: 30px; font-size:35px; width: auto;" type="number" value="Ingrese Matricula o DNI" id="lblNuevoDato" required></input>
-                    <button class="btn btn-success btn-lg" style="font-size: 20px;">
-                        GENERAR   NUEVO   TURNO
-                    </button>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-            </td>
-        </tr>
-    </table>
+    <h3>Nuevo Turno</h3>
+
+    <div class="mb-3">
+        <form action="/admin/create" method="POST">
+        <label for="exampleFormControlInput1" class="form-label">CODIGO</label>
+        <input type="text" name="code" class="form-control" id="" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">BOX</label>
+        <input type="text" name="box" class="form-control" id="" placeholder="">
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+      </div>
+           
+
 
     <h4>Pendientes sin atender:</h4>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <% for( let i = 0; i < turnos.length; i++ ) { %>
-            <tr>
-                <td>Ticket Nro.   <%= turnos[i].id %></td>
-                <td>Codigo:   <%= turnos[i].code %></td>
-            </tr>
-            <% } %>
-        </thead>
-        <tbody id="data0">
-        </tbody>
+    <ul>
+        <% for( let i = 0; i < turnos.length; i++ ) { %>
+        <li>
+            <a href="/admin/turnos/turnoId/<%= turnos[i].id %>"><%= turnos[i].box %></a>     <%= turnos[i].code %>
+        </li>
+        <% } %>
 
-    </table>
+    </ul>
+   
+    
     <div class="col-6">
         <form action="escritorio.html">
             <p>Ingrese el número de BOX:  (del 1 al 4)</p>

@@ -8,7 +8,7 @@
         <title>Pantalla del publico</title>
 
         <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
     
       </head>
 
@@ -31,47 +31,20 @@
             </td>
             <td>
                 <table id="tablasecundaria">
+                
                     <tr>
-                        <td>
+                        <td>  <% for( let i = 0; i < turnos.length; i++ ) { %>
                             <div class="mx-auto" style="width: 2px;">
-                                
-                                <h3><%= turnos[1].code %></h3>
+                                <h3><%= turnos[i].code %></h3>
                                 <br>
                                 <br>
-                                <h3>CAJA  <%= turnos[1].box %></h3>
-                              
-                                
-                                
+                                <h3>CAJA  <%= turnos[i].box %></h3>
                               </div>
+                              <% } %>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="mx-auto" style="width: 2px;">
-                                
-                                <h3><%= turnos[2].code %></h3>
-                                <br>
-                                <br>
-                                <h3>CAJA  <%= turnos[2].box %></h3>
-                              
-                                
-                                
-                              </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="mx-auto" style="width: 2px;">
-                                
-                                <h3><%= turnos[3].code %></h3>
-                                <br>
-                                <br>
-                                <h3>CAJA  <%= turnos[3].box %></h3>
-                              
-                                
-                                
-                              </div>
-                        </td>
+                       
                     </tr>
                 </table>
             </td>

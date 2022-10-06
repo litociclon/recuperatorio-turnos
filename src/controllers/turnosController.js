@@ -17,5 +17,33 @@ module.exports = {
             return res.render("turnos", {turnos})
             //res.json(turnos);
         });
-    }
+    },
+
+    create: (req, res) => {
+        //recibe la info de un turno nuevo
+        db.orderly_turns.create({
+            code: req.body.code,
+            box: req.body.box,
+           
+        })
+        .then(function(){
+            return res.redirect("turnos")
+        })
+    },
+
+    detail: (req, res) => {
+        const id = req.params.id;
+        db.orderly_turns.findByPk(id)
+        .then(function(turno){
+            return res.render("turnoId", { turnos: turno })
+        })
+    },
+
+    /*detail:(req, res) => {
+        const id = req.params.id;
+    db.orderly_turns.findByPk(id)
+    .then(function(turno){
+        return res.render("turnoId")
+    })
+    }*/
 }
