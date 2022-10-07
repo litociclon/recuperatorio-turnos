@@ -19,22 +19,20 @@
 
         <tr>
             <td valign="middle" class="ticket-actual">
+               
 
                 <div class="mx-auto" style="width: 4px;">
-                 
-                    <h3>CODIGO    <%= turnos[0].code %></h3>
+                  <H2>Ultimo llamado</H2>
+                  <% for( let i = 0; i < turnos.length-2; i++ ) { %>
+                    <h3>CODIGO    <%= turnos[i].code %></h3>
                     <br>
                     <br>
-                    <h3>CAJA     <%= turnos[0].box %></h3>
+                    <h3>CAJA     <%= turnos[i].box %></h3>
+                    <% } %>
                    
                 </div>
             </td>
             <div>
-            <div class="ratio" style="--bs-aspect-ratio: 10%;">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" ></iframe>
-                  </div>
-                <div>2x1</div>
               </div>
             </div>
             <td>

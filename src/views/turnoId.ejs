@@ -16,7 +16,12 @@
       <div class="col-6">box<br> <%= turnos.box %></div>
     </div>
   </div>
+  <br>
+  <form action="/admin/turnos/turnoId/<%= turnos.id %>?_method=DELETE" method="POST">
+  <button type="submit" class="btn btn-primary">Eliminar</button>
+  <a href="turnos"></a>
 
+ </form>
   </body>
   </html>
 

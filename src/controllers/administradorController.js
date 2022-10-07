@@ -6,8 +6,8 @@ const controller = {
     index: (req, res) => {
         db.orderly_turns.findAll()
         .then(function(turnos){
-            return res.render("index", {turnos})
-            //res.json(turnos);
+            //return res.render("index", {turnos})
+            res.json(turnos);
         });
     },
 

@@ -6,8 +6,8 @@ module.exports = {
     index: (req, res) => {
         db.orderly_turns.findAll()
         .then(function(turnos){
-            return res.render("index", {turnos})
-            //res.json(turnos);
+            //return res.render("index", {turnos})
+            res.json(turnos);
         });
     },
     
@@ -16,5 +16,9 @@ module.exports = {
         .then(function(users){
             res.json(users);
         });
-    }
+    },
+
+   
+
+
 }
