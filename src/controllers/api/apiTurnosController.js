@@ -69,11 +69,11 @@ module.exports = {
 
     destroy: (req, res) => {
         const id = req.params.id;
-        db.orderly_turns.destroy({ where: { id }})
+        db.orderly_turns.destroy({ where: { id }, force: true })//force true es para asegurar el borrado
         .then(function(){
-            return res.redirect("/admin/turnos");
-        })
+            return res.status(200).json({code: res.statuscode, message: "Borrado con exito"})})
+            .catch(error => res.send(error))
+        }
     }
 
  
-}
